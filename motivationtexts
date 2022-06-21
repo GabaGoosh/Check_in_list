@@ -23,11 +23,15 @@ MotivDic = {'motiv':'Try deep breathing for three mins!','motiv':'Drink 8oz of w
 'motiv':'massage your hand/feet','motiv':'Do some stretches for 10 mins','motiv':'Remove temptations that are around you.',
 'motiv':'Out of sight, out of mind.','motiv':'Eat something high in protien instead!','motiv':'talk to someone if you can'}
 
-yes = 1
-no = 2
-score = 0 + yes
-total = 0 + no 
+score = 0 
+total = 0 
 
 for question in YNquestDic['questions']:
     print(question['Qs'])
-    print(input('yes or no?'))
+    user_choice = (input('yes or no?'))
+    if user_choice == "yes":
+        score +=1
+    else:
+        total +=1
+print('you said yes', score,'times')
+print('you said no', total,'times')
