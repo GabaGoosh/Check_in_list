@@ -1,0 +1,33 @@
+import os
+import csv
+
+YNquestDic = {
+    'number': 10,
+    "questions":
+    [
+        {'Qs':'Are you feeling angery?'},{'Qs':'Are you feeling stressed?'},
+        {'Qs':'Are you feeling depressed?'},{'Qs':'Are you feeling lonely?'},{'Qs':'Are you bored?'},
+        {'Qs':'Are you feeling anxious?'},{'Qs':'Are you feeling thirsty?'},{'Qs':'Did you sleep well last night?'},
+        {'Qs':'Are you feeling "fat"?'},{'Qs':'Are you feeling out of control right now?'} 
+    ]
+}
+
+questDic = {'longqs':'When was the last time you ate?','longqs':'what was the last thing you ate?',
+'longqs':'what are you feeling right now?','longqs':'How many hours of sleep did you get?',
+'longqs':'When was the last time you took your medicine?','longqs':'what happened right before you felt the urge to eat?',
+'longqs':'What are you craving?'}
+
+MotivDic = {'motiv':'Try deep breathing for three mins!','motiv':'Drink 8oz of water before eating.',
+'motiv':'Go exercise for 10 mins!','motiv':'Do aromatherapy, smell somthing if you can!',
+"motiv":"Distract yourself for 15 mins and see if you're still hungry.",'motiv':'Chew some gum!',
+'motiv':'massage your hand/feet','motiv':'Do some stretches for 10 mins','motiv':'Remove temptations that are around you.',
+'motiv':'Out of sight, out of mind.','motiv':'Eat something high in protien instead!','motiv':'talk to someone if you can'}
+
+yes = 1
+no = 2
+score = 0 + yes
+total = 0 + no 
+
+for question in YNquestDic['questions']:
+    print(question['Qs'])
+    print(input('yes or no?'))
