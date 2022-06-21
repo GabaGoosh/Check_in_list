@@ -2,7 +2,7 @@ import os
 import csv
 
 YNquestDic = {
-    'number': 10,
+   # 'number': 10,
     "questions":
     [
         {'Qs':'Are you feeling angery?'},{'Qs':'Are you feeling stressed?'},
@@ -12,10 +12,16 @@ YNquestDic = {
     ]
 }
 
-questDic = {'longqs':'When was the last time you ate?','longqs':'what was the last thing you ate?',
-'longqs':'what are you feeling right now?','longqs':'How many hours of sleep did you get?',
-'longqs':'When was the last time you took your medicine?','longqs':'what happened right before you felt the urge to eat?',
-'longqs':'What are you craving?'}
+questDic = {
+    "longQuestions":
+    [
+        {'longqs':'When was the last time you ate?'},{'longqs':'what was the last thing you ate?'},
+        {'longqs':'what are you feeling right now?'},{'longqs':'How many hours of sleep did you get?'},
+        {'longqs':'When was the last time you took your medicine?'},
+        {'longqs':'what happened right before you felt the urge to eat?'},
+        {'longqs':'What are you craving?'}
+    ]
+}
 
 MotivDic = {'motiv':'Try deep breathing for three mins!','motiv':'Drink 8oz of water before eating.',
 'motiv':'Go exercise for 10 mins!','motiv':'Do aromatherapy, smell somthing if you can!',
@@ -26,6 +32,8 @@ MotivDic = {'motiv':'Try deep breathing for three mins!','motiv':'Drink 8oz of w
 score = 0 
 total = 0 
 
+#''' is a string and is disabling this code
+'''
 for question in YNquestDic['questions']:
     print(question['Qs'])
     user_choice = (input('yes or no?'))
@@ -35,3 +43,15 @@ for question in YNquestDic['questions']:
         total +=1
 print('you said yes', score,'times')
 print('you said no', total,'times')
+'''
+#asking opend ended questions with the input printed out at the end
+
+
+for longquestion in questDic['longQuestions']:
+    print(longquestion['longqs'])
+    user_input = (input('Type here'))
+for longquestion in questDic['longQuestions']:
+    print(longquestion['longqs']':', user_input)
+
+
+
