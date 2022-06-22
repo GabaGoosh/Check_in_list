@@ -70,10 +70,9 @@ for longquestion in questDic['longQuestions']:
         ]
     }
     for answer_list in answer_Dic['answer_list']:
-        for answer in answer_list['answer':user_list[i]]:
-            print(answer)
+        print(answer_list[0:6])
         #print(answer_list['answer'])
-    
+    #Look at sliced lists, this may b the anwser
    
    # user_input = (input('Type here:',))
 #for longquestion in questDic['longQuestions']:
